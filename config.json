@@ -1,0 +1,1 @@
+{ "accessKeyId": "<your-aws-access-key-id>", "secretAccessKey": "<your-aws-secret-access-key>", "region": "us-east-1" }

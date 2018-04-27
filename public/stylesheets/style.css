@@ -1,0 +1,151 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+/* Material icon */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v21/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-cursor {
+    cursor: pointer;
+}
+.text-center {
+    text-align: center;
+}
+.padding-top-30 {
+    padding-top: 30px;
+}
+.margin-top-30 {
+    margin-top: 30px;
+}
+.margin-top-25 {
+    margin-top: 25px;
+}
+.loadingIcon {
+    margin-top: 150px;
+    text-align: center;
+}
+.btn{
+background-color: #00acc1 ;
+}
+
+.custom-tab-indicator .indicator {
+background-color: #ffffff;
+right: 0px;
+left: 0px;
+display:none;
+}
+#tab-container .tabs .tab {
+    text-transform: none !important;
+    flex-grow: 0;
+    width: auto;
+    height: 35px;
+    line-height: 35px;
+}
+#tab-container .tabs{
+    height: 35px;
+}
+#tab-container .tabs .tab a.active {
+    border-bottom: 0.12em solid white;
+    background-color: #0097a7;
+}
+#tab-container .tabs .tab a{
+    font-size: 1rem;
+}
+
+.custom-card {
+    height:585px; 
+}
+.custom-card-half {
+    height:281px; 
+}
+.custom-card-half2 {
+    height:350px; 
+}
+
+#version {
+    font-size: 13px;
+}
+
+.autocomplete-content {
+    display: block;
+    margin-top: -12px;
+    opacity: 1;
+    max-height: 200px;
+    width: 95%;
+    overflow-y: auto;
+}
+
+.autocomplete-content li {
+    clear: both;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    text-transform: none;
+    line-height: 1rem;
+    min-height: 30px;
+}
+
+.autocomplete-content li > span {
+    font-size: .9rem;
+    display: block;
+    line-height: 10px;
+    padding: 10px 16px;
+}
+
+.autocomplete-content li > span .highlight {
+  color: #000000;
+}
+
+.autocomplete-content li:hover {
+  background: #eee;
+  cursor: pointer;
+
+}
+
+#app-header{
+	color: black;
+}
+.feature-name{
+    margin-top:10px;
+}
+.feature-description{
+    color:#0097a7; 
+    font-size: 16px; 
+    font-style: italic;
+}
+#labels_data_table td, #labels_data_table th {
+    padding: 0 5px;
+    font-size: 1rem;
+}
+#labels_data_table tbody {
+    display:block;
+    height:auto;
+    max-height:480px;
+    overflow:auto;
+}
+#labels_data_table thead, #labels_data_table tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}

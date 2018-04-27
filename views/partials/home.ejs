@@ -1,0 +1,118 @@
+<div role="navigation" ng-controller="homeCtrl">
+    <nav class="white" style="box-shadow: 0px 1px 4px 4px #00838f">
+        <div class="nav-wrapper" style="padding: 10px 30px" id="app-header">
+			<span><h4 style="display:inline">Rekognition App</h4></span>
+			<span id="version"> v 0.1</span>
+        </div>
+        
+        <div id="tab-container" class="nav-content cyan darken-1" style="margin-top:1px; box-shadow: 0px 1px 4px 1px #00838f;">
+            <div class="row">
+                <div class="center" style="margin-left:30px">
+                    <ul class="tabs tabs-transparent left custom-tab-indicator cyan darken-1" style="font-family: Calibri;">
+                        <li class="tab"><a class="active white-text" href="#home">Object and scene detection</a></li>
+                        <li class="tab"><a class="white-text" href="#home2">Other Features</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="row" style="margin-top:60px; font-family: Calibri;font-size: 1.2rem;">
+        <div id="home" class="col s12"> 
+            <div class="col s12 m4 l4">
+                <form name="processImageForm" class="col s12" ng-submit="processImage(processImageForm)" id="processImageForm" ng-validate="validationOptions" >
+                    <div class="card custom-card">
+                        <div class="row card-content cyan-text text-darken-4">
+                            <span class="card-title cyan-text text-darken-2">Object and scene detection</span>
+                            
+                            <div class="" >Rekognition automatically labels objects, concepts and scenes in your images, and provides a confidence score.</div>
+                            
+                            <div class="uploadFileHeader" style="margin-top:20px;">Upload image file </div>
+                            <div class=""> 
+                                <div class="file-field input-field col s12">
+                                  <div class="btn">
+                                    <span>File</span>
+                                    <input type="file" id="imgUpload">
+                                  </div>
+                                  <div class="file-path-wrapper">
+                                    <input class="file-path validate" placeholder="Choose a jpg/png file" type="text" onchange="angular.element(this).scope().uploadImage()" id="imgUploadPath">
+                                  </div>
+                                </div>
+                                
+                            </div>
+
+                            <img id="imagePreview" src="#" alt="" height="60%" width="60%" style="display: block;margin-left: auto;margin-right: auto;" />
+                            
+
+                            <h4 id="processingWait" ng-if="isProccessing" style="text-align:center">Please Wait...</h4>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+                    <div class="col s12 m4 l4">
+                            <div class="card custom-card">
+                                <div class="row card-content cyan-text text-darken-4">
+                                    <span class="card-title cyan-text text-darken-2">Object and scene detection Result</span>
+                                    
+                                    <div class="" ng-if="Labels == null"><i>No Lables...</i></div>
+                                    <table class="striped" id="labels_data_table" ng-if="Labels != null">
+                                            <thead>
+                                                <tr>
+                                                    <th data-field="serialNo">S.No.</th>
+                                                    <th data-field="Name">Label</th>
+                                                    <th data-field="Confidence">Confidence</th>
+                                                </tr>
+                                            </thead>
+                                        
+                                            <tbody>
+                                              <tr ng-repeat="row in Labels">
+                                                <td>{{ $index + 1 }}</td>
+                                                <td>{{row.Name}}</td>
+                                                <td>{{row.Confidence}}</td>
+                                              </tr>
+                                            </tbody>
+                                    </table> 
+        
+                                    
+                                </div>
+                            </div>
+                    </div>
+        </div>
+
+
+        <div id="home2" class="col s12"> 
+                <div class="col s12 m4 l4">
+                      <div class="card custom-card">
+                            <div class="row card-content cyan-text text-darken-4">
+                                <span class="card-title cyan-text text-darken-2">Other Features to be implemented:</span>
+                                
+                                <div class="feature-name">1. Image moderation</div>
+                                <span class="feature-description">Rekognition automatically detects explicit or suggestive adult content in your images, and provides confidence scores.</span>
+
+                                <div class="feature-name">2. Facial analysis</div>
+                                <span class="feature-description">Get a complete analysis of facial attributes, including confidence scores.</span>
+                                
+                                <div class="feature-name">3. Celebrity recognition</div>
+                                <span class="feature-description">Rekognition automatically recognizes celebrities in images and provides confidence scores.</span>
+
+                                <div class="feature-name">4. Face comparison</div>
+                                <span class="feature-description">Compare faces to see how closely they match based on a similarity percentage.</span>
+
+                                <div class="feature-name">5. Text in image</div>
+                                <span class="feature-description">Rekognition automatically detects and extracts text in your images.</span>
+
+                            </div>
+                        </div>
+                </div>
+    
+    
+        </div>
+
+
+    </div>
+
+    
+</div>
